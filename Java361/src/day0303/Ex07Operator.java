@@ -75,7 +75,7 @@ public class Ex07Operator {
         // 이 때에는 앞의 값과 뒤의 값을 모두 String 값으로 변환하고
         // 앞의 값 뒤에 뒤의 값을 이어서 한개의 커다란 String 결과 값을 연산하라는 의미가 된다.
         
-        // 앞의 String 값 "A:에 뒤의 String 값 "B"를 이어서
+        // 앞의 String 값 "A"에 뒤의 String 값 "B"를 이어서
         // "AB" 라는 결과값을 만들고
         // 그 결과값을 화면에 출력해라
         System.out.println("A"+"B");

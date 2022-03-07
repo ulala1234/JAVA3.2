@@ -129,7 +129,7 @@ public class Ex08Operator02 {
         System.out.println("name의 현재값: " + name);
         // name의 현재 값에 "은" 을 이어 붙인 결과값을
         // 다시 name에 할당한다.
-        name+= "은";
+        name += "은";
         // name의 현재값을 화면에 출력한다.
         System.out.println("name의 현재값: " + name);
                 

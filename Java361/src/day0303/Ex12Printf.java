@@ -52,9 +52,9 @@ public class Ex12Printf {
         //    원하는 형식으로 출력해줄 수 있다.
         System.out.printf("이름: %s 나이: %03d세 직급: %s\n", "권은지", 27, "개발자");
         // 2. 존재하지 않는 %문자를 사용하면 에러가 발생한다.
-        // System.out.printf("1%\n", 123);
+        // System.out.printf("%1\n", 123);
         // 3. %문자와 출력할 대상의 데이터타입이 다르면 에러가 발생한다.
-        // System.out.printf("3%d\n", 12.345);
+        // System.out.printf("%3d\n", 12.345);
         // 4. %문자의 개수보다 출력해야할 대상의 개수가 더 많으면?
         System.out.printf("%d %d %d\n", 1, 2, 3, 4, 5);
         // 5. %문자의 개수보다 출력해야할 대상의 개수가 더 적으면?

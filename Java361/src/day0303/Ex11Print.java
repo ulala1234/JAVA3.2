@@ -7,7 +7,7 @@ package day0303;
 public class Ex11Print {
     public static void main(String[]args) {
         // 출력에 사용할 String 변수 string1과 string2를 선언하고
-        // 각각 "abcd"dhk "EFGH"를 할당한다.
+        // 각각 "abcd"와 "EFGH"를 할당한다.
         String string1 = "abcd";
         String string2 = "EFGH";
         

@@ -45,14 +45,15 @@ public class Ex09Operator03 {
         String string1 = "abc";
         // String 변수 string2를 선언하고 "abc"를 할당하되, 다른 방법으로 할당한다.
         String string2 = new String("abc");
+
         // String 변수 string3을 선언하고 string1의 현재 값을 저장한다.
         String string3 = string1;       
         
         // string1, string2, string3에 같은 글자들만 들어가있는지 확인하기 위해
         // ###의 현재 값: [###] 의 형태로 출력되게 코드를 작성한다.
-        System.out.println("string1의 현재 값: ["+string1+"]");
-        System.out.println("string2의 현재 값: ["+string2+"]");
-        System.out.println("string3의 현재 값: ["+string3+"]");
+        System.out.println("string1의 현재 값: [" + string1 + "]");
+        System.out.println("string2의 현재 값: [" + string2 + "]");
+        System.out.println("string3의 현재 값: [" + string3 + "]");
         
         // string1과 string2
         // string1과 string3
