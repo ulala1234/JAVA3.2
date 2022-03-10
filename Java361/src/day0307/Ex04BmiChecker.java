@@ -36,102 +36,48 @@ public class Ex04BmiChecker {
         // 입력에서 사용할 Scanner 클래스 변수
         Scanner scanner = new Scanner(System.in);
         
-        // 1. 이름, 나이, 키, 몸무게 입력받기
-        // 1.1. 이름 입력 받기
-        System.out.println("이름을 입력해주세요.");
-        System.out.print("> ");
-        String name = scanner.nextLine();
-        
-        // 1.2. 나이 입력 받기
-        System.out.println("나이를 입력해주세요.");
-        System.out.print("> ");
-        int age = scanner.nextInt();
-        
-        // 1.3. 키 입력 받기
-        System.out.println("키를 입력해주세요.");
-        System.out.print("> ");
-        double height = scanner.nextDouble();
-        
-        // 2. 2.72M가 안넘으면 몸무게를 입력 받기/아니면 2.72M 이하로 입력해주세요.        
-        if(height <= 2.72) {
-            System.out.println("몸무게를 입력해주세요.");
-            System.out.print("> ");
-            double weight = scanner.nextDouble();
-            
-            // 2.2. 635kg가 안넘으면 BMI 출력하기/아니면 635kg 이하로 입력해주세요. 
-            
-            if(weight <= 635) {
-                
-                // 3.3. 이름, 나이, 키, 몸무게 출력/비만도 출력
-                System.out.printf("이름: %s 나이: %03d세\n", name, age);
-                System.out.printf("키: %.2fM 몸무게: %06.2fkg\n", height, weight);
-                double bmi= weight / height / height;
-                System.out.printf("BMI: %.2f 비만도: ", bmi);
-                
-                if (bmi < 18.5) {
-                    System.out.println("저체중");
-                } else if(bmi < 23) {
-                    System.out.println("정상 체중");           
-                } else if(bmi < 25) {
-                    System.out.println("과체중");
-                } else {
-                    System.out.println("비만");
-                }
-                
-            } else {
-                System.out.println("635kg 이하로 입력해주세요.");
-            }
-            
-        } else {
-            System.out.println("2.72M 이하로 입력해주세요.");
-        }
-      
-        System.out.println("--------------------------------------\n");
-        
         
         // 1. 이름을 입력 받는다.
         System.out.println("이름을 입력해주세요.");
         System.out.print("> ");
-        scanner.nextLine();
-        String name1 = scanner.nextLine();
+        String name = scanner.nextLine();
         
         // 2. 나이를 입력 받는다.
         System.out.println("나이를 입력해주세요.");
         System.out.print("> ");
-        int age1 = scanner.nextInt();
+        int age = scanner.nextInt();
         
         // 3. 키를 입력 받는다.
         System.out.println("키를 입력해주세요.");
         System.out.print("> ");
-        double height1 = scanner.nextDouble();
+        double height = scanner.nextDouble();
         
         // 4. 키가 올바른지 체크한다.
-        if(height1 > HEIGHT_MINIMUM && height1 <= HEIGHT_MAXIMUM) {
+        if(height > HEIGHT_MINIMUM && height <= HEIGHT_MAXIMUM) {
             // 4-1. 올바른 키의 범위에 속하므로 몸무게를 입력 받는다.
             System.out.println("몸무게를 입력해주세요.");
             System.out.print("> ");
-            double weight1 = scanner.nextDouble();
+            double weight = scanner.nextDouble();
             
             // 5. 몸무게가 올바른지 체크한다.
-            if(weight1 > WEIGHT_MINIMUM && weight1 <= WEIGHT_MAXIMUM) {
+            if(weight > WEIGHT_MINIMUM && weight <= WEIGHT_MAXIMUM) {
                 // 5-1. 올바른 몸무게의 범위에 속하므로
                 //      BMI 계산 후 결과 출력
                 
-                // 출력
                 // 이름: ### 나이: 0##세 출력
-                System.out.printf("이름: %s 나이: %03d세\n", name1, age1);
-                // 키: #.##M 몸무게: 0##.##kg
-                System.out.printf("키: %.2fM 몸무게: %06.2fkg\n", height1, weight1);
-                // BMI: ##.## 비만도: ###
-                double bmi1= weight1 / height1 / height1;
-                System.out.printf("BMI: %.2f 비만도: ", bmi1);
+                System.out.printf("이름: %s 나이: %03d세\n", name, age);
+                // 키: #.##M 몸무게: 0##.##kg 출력
+                System.out.printf("키: %.2fM 몸무게: %06.2fkg\n", height, weight);
+                // BMI: ##.## 비만도: 출력
+                double bmi= weight / height / height;
+                System.out.printf("BMI: %.2f 비만도: ", bmi);
                 
                 // 비만도 결과값 출력
-                if (bmi1 < BMI_STANDARD1) {
+                if (bmi < BMI_STANDARD1) {
                     System.out.println("저체중");
-                } else if(bmi1 < BMI_STANDARD2) {
+                } else if(bmi < BMI_STANDARD2) {
                     System.out.println("정상 체중");           
-                } else if(bmi1 < BMI_STANDARD3) {
+                } else if(bmi < BMI_STANDARD3) {
                     System.out.println("과체중");
                 } else {
                     System.out.println("비만");

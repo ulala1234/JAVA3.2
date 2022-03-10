@@ -18,56 +18,23 @@ public class Ex02ArmyChecker {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        // 1. 성별, 나이, 신체등급을 입력 받는다. (성별 int 값으로)
-        
-        System.out.println("성별을 입력해주세요.");
-        System.out.print("> ");      
-        int gender = scanner.nextInt();
-        
-        System.out.println("나이를 입력해주세요.");
-        System.out.print("> ");
-        int age = scanner.nextInt();
-        
-        System.out.println("신체등급을 입력해주세요.");
-        System.out.print("> ");
-        int pysical = scanner.nextInt();
-        
-        System.out.println("성별을 입력해주세요.");
-        System.out.print("> ");
-        
-        
-        if(gender == 2) {
-            System.out.println("여성에게는 국방의 의무가 부여되지 않습니다.");
-        } else {
-            if(age < 19) {
-                System.out.println("아직 미성년자에게는 신체등급이 존재하지 않습니다.");
-            } else if(pysical >= 1 && pysical <= 3) {
-                System.out.println("현역");
-            } else if(pysical == 4) {
-                System.out.println("공익");
-            } else {
-                System.out.println("면제");
-                }
-            }
-    
-        System.out.println("-----------------------------");
-        
+      
         // 1. 성별을 입력 받는다.
         System.out.println("성별을 입력해주세요. (1은 남자 2는 여자)");
         System.out.print("> ");
-        int gender1 = scanner.nextInt();
+        int gender = scanner.nextInt();
         
         // 2. 남성인지 여성인지에 따라 코드를 결정해준다.
-        if(gender1 == 1) {
+        if(gender == 1) {
             // 사용자가 남성이므로
             // 나이를 입력 받는다.
             
             System.out.println("나이를 입력해주세요.");
             System.out.print("> ");
-            int age1 = scanner.nextInt();
+            int age = scanner.nextInt();
             
             // 나이에 따른 코드를 결정해준다.
-            if(age1 >= 19) {
+            if(age >= 19) {
                 // 남자 성인이므로, 신체 등급을 입력 받는다.
                 System.out.println("신체 등급을 입력해주세요.");
                 System.out.print("> ");

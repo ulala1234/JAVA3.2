@@ -159,7 +159,7 @@ public class Ex12GradeBook {
                 System.out.println("아직 입력된 정보가 없습니다.");
             }
                 
-            } else if(userChoice1 == 3) {
+            } else if (userChoice1 == 3) {
                 System.out.println("사용해주셔서 감사합니다.");
                 break;
             }

@@ -1,5 +1,6 @@
 package day0307;
 // 제어문 02
+
 // while 반복문
 
 // while 반복문은
@@ -12,16 +13,15 @@ package day0307;
 //          실행할 코드
 // }
 
-public class Ex05While {
+public class Ex05While01 {
     public static void main(String[] args) {
         // while의 조건식에서 사용할 int 변수 선언 및 초기화
         int number = 3;
-        
+
         // number의 현재 값이 0보다 클 동안
         // number의 현재 값을 출력하는 코드
         // 단, number의 현재 값을 출력하고 나서는
         // 값을 1 감소 시킨다.
-        
         
         while (number > 0) {
             int a = 0;
@@ -30,8 +30,7 @@ public class Ex05While {
             System.out.println("a의 현재 값: " + a);
             a++;
         }
-        
-     
+
     }
 
 }

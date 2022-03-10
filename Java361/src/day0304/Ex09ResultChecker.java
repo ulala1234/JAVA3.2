@@ -17,40 +17,22 @@ public class Ex09ResultChecker {
         // 2. 통과 기준의 개별 점수
         final int SCORE_MINIMUM = 60;
         
-        Scanner scanner = new Scanner(System.in);
-        
-     // 1. 국어, 영어, 수학 점수를 입력받는다.
-        System.out.println("국어 점수를 입력하시오.");
-        System.out.print("> ");
-        int korean = scanner.nextInt();
-        
-        System.out.println("영어 점수를 입력하시오.");
-        System.out.print("> ");
-        int english = scanner.nextInt();
-        
-        System.out.println("수학 점수를 입력하시오.");
-        System.out.print("> ");
-        int math = scanner.nextInt();
-        
-        System.out.println("----------------------------------");
-        
-        
-        
+        Scanner scanner = new Scanner(System.in);            
                 
         // 국어 점수 입력
         System.out.println("국어 점수를 입력해주세요.");
         System.out.print("> ");
-        int korean1 = scanner.nextInt();
+        int korean = scanner.nextInt();
         
         // 영어 점수 입력
         System.out.println("영어 점수를 입력해주세요.");
         System.out.print("> ");
-        int english1 = scanner.nextInt();
+        int english = scanner.nextInt();
         
         // 수학 점수 입력
         System.out.println("수학 점수를 입력해주세요.");
         System.out.print("> ");
-        int math1 = scanner.nextInt();
+        int math = scanner.nextInt();
         
         // 탈락 조건 1.
         // 평균이 70 미만일 경우 -> 총점이 210 미만일 경우
@@ -62,9 +44,9 @@ public class Ex09ResultChecker {
         // 수학 점수가 60점 미만일 경우
         
         // 총점을 계산하여 변수에 저장
-        int sum = korean1 + english1 + math1;
+        int sum = korean + english + math;
         
-        if(sum < SUM_MINIMUM || korean1 < SCORE_MINIMUM || english1 < SCORE_MINIMUM || math1 < SCORE_MINIMUM) {
+        if(sum < SUM_MINIMUM || korean < SCORE_MINIMUM || english < SCORE_MINIMUM || math < SCORE_MINIMUM) {
             System.out.println("탈락입니다.");            
         } else {
             System.out.println("합격입니다.");
