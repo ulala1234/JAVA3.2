@@ -67,7 +67,7 @@ public class Ex03Lotto02 {
                 lottoNumbers[i+1] = temp;
                 // 이 다음에 실행할 코드는 i++이므로
                 // i++ 후에 i가 0이 될수 있게
-                // i를 -1로 초기ㅗ하
+                // i를 -1로 초기화
                 i = -1;
             }
         }

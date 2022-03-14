@@ -9,34 +9,9 @@ package day0307;
 import java.util.Scanner;
 public class Ex07GradeChecker {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("점수를 입력하세요.");
-        System.out.print("> ");
-        int grade = scanner.nextInt();
-        
-        while(grade < 0 || grade > 100) {
-            System.out.println("올바른 점수를 입력해주세요. 0~100 사이");
-            System.out.print("> ");
-            grade = scanner.nextInt();
-        }
-        
-        if (grade >= 90) {
-            System.out.println("A");            
-        } else if (grade >= 80) {
-            System.out.println("B");      
-        } else if (grade >=70) {
-            System.out.println("C");           
-        } else if (grade >= 60) {
-            System.out.println("D");      
-        } else {
-            System.out.println("F");      
-        }   
-        
-        System.out.println("----------------------------");
-        
         // 입력에 사용할 Scanner 클래스 변수
-        
+        Scanner scanner = new Scanner(System.in);
+                              
         // 사용자로부터 점수를 입력 받는다.
         System.out.println("점수를 입력해주세요.");
         System.out.print("> ");

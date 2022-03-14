@@ -9,29 +9,10 @@ package day0307;
 // 8시 35분까지
 
 import java.util.Scanner;
-public class Ex11GradeChecker02 {
+public class Ex11GradeChecker2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-     // 1. -1 입력받으면 종료되게
-        while(true) {
-            System.out.println("-1: 종료");
-            System.out.print("> ");
-            int userChoice = scanner.nextInt();
-            if(userChoice == -1) {
-                System.out.println("사용해주셔서 갑사합니다.");
-                break;
-            } else if(userChoice != -1) {
-                // 2. 점수 입력받기
-                System.out.println("점수를 입력하세요.");
-                System.out.print("> ");
-                int grade = scanner.nextInt();
-            }
-                    
-        }
-        
-        
-        System.out.println("-------------------------------\n");
+
         while(true) {
             // 사용자로부터 점수를 입력받는다.
             System.out.println("점수를 입력하시거나 종료하시려면 -1을 입력해주세요.");
