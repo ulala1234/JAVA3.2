@@ -3,7 +3,7 @@ package util;
 // 동적할당을 사용할 때 필요로 하는 메소드들이 담겨있는
 // ArrayUtil 클래스
 
-
+import struct.Student;
 public class ArrayUtil {
     // 1. int[] 기준
     // A. 현재 배열의 길이를 알려주는 size(int[])
@@ -142,5 +142,199 @@ public class ArrayUtil {
         return removeByIndex(array, indexOf(array, element));
     }
     
+    // 2. String[] 기준
+    // A. size(String[])
+    public static int size1(String[] array) {
+        return array.length;
+    }
+    
+    // B. isEmpty(String[])
+    public static boolean isEmpty1(String[] array) {
+        return size1(array) == 0;
+    }
+    
+    // C. get(String[], int)
+    public static String get1(String[] array, int index) {
+        return array[index];
+    }
+    
+    // D. contains(String[], String)
+    public static boolean contains1(String[] array, String e) {
+        for(int i = 0; i < size1(array); i++) {
+            if(e.equals(get1(array, i))) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    // E. indexOf(String[], String)
+    public static int indexOf1(String[] array, String e) {
+        for(int i = 0; i < size1(array); i++) {
+            if(e.equals(get1(array, i))) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    // F. lastIndexOf(String[], String)
+    public static int lastIndexOf1(String[] array, String e) {
+        for(int i = size1(array) -1; i >= 0; i--) {
+            if(e.equals(get1(array, i))) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    // G. add(String[], String)
+    public static String[] add1(String[] array, String e) {
+        String[] temp = new String[size1(array) + 1];
+        
+        for(int i = 0; i < size1(array); i++) {
+            temp[i] = get1(array, i);
+        }
+        temp[size1(temp) -1] = e;
+        
+        return temp;
+    }
+    
+    // H. add(String[], String)
+    public static String[] add1(String[] array, int index, String e) {
+        String[] temp = new String[0];
+        
+        for(int i = 0; i < index; i++) {
+            temp = add1(temp, get1(array, i));
+        }
+        
+        temp = add1(temp, e);
+        
+        for(int i = index; i < size1(array); i++) {
+            temp = add1(temp, get1(array, i));
+        }
+        
+        return temp;
+    }
+    
+    // I. set(String[], int, String)
+    
+    public static String set1(String[] array, int index, String e) {
+        String temp = get1(array, index);
+        
+        array[index] = e;
+        
+        return temp;
+    }
+    // J. remove(String[], int)
+    
+    public static String[] remove1(String[] array, int index) {
+        String[] temp = new String[0];
+        
+        for(int i = 0; i < size1(array); i++) {
+            if(i != index) {
+                temp = add1(temp, get1(array, i));
+            }
+        }
+        
+        return temp;
+    }
+    // K. remove(String[], String[])
+    
+    public static String[] remove1(String[] array, String e) {
+        return remove1(array, indexOf1(array, e));
+    }
+    
+    
+    // 3. Student[]
+    // A. equals(Student, Student)
+    public static boolean equals(Student s1, Student s2) {
+        
+        return s1.id == s2.id;
+    }
+    
+    // B. size(Student[])
+    public static int size(Student[] array) {
+        return array.length;
+    }
+    
+    // C. isEmpty(Student[])
+    public static boolean isEmpty(Student[] array) {
+        return size(array) == 0;
+    }
+    
+    // D. get(Student[], int)
+    public static Student get(Student[] array, int index) {
+        return array[index];
+    }
+    
+    // E. contains(Student[], Student)
+    public static boolean contains(Student[] array, Student s) {
+        for(int i = 0; i < size(array); i++) {
+            if(equals(s, get(array, i))) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    // F. indexOf(Student[], Student)
+    public static int indexOf(Student[] array, Student s) {
+        for(int i = 0; i < size(array); i++) {
+            if(equals(s, get(array, i))) {
+                return i;
+            }
+        }
+        
+        return -1;
+    }
+    
+    // G. add(Student[], Student)
+    public static Student[] add(Student[] array, Student s) {
+        Student[] temp = new Student[size(array) + 1];
+        for(int i = 0; i < size(array); i++) {
+            temp[i] = get(array, i);
+        }
+        temp[size(temp) - 1] = s;
+        return temp;
+    }
+    
+    // H. add(Student[], int, Student)
+    public static Student[] add(Student[] array, int index, Student s) {
+        Student[] temp = new Student[0];
+        for(int i = 0; i < index; i++) {
+            temp = add(temp, get(array, i));
+        }
+        temp = add(temp, s);
+        for(int i = index; i < size(array); i++) {
+            temp = add(temp, get(array, i));
+        }
+        return temp;
+        
+    }
+    
+    // I. set(Student[], int, Student)
+    public static Student set(Student[] array, int index, Student s) {
+        Student temp = get(array, index);
+        array[index] = s;
+        return temp;
+    }
+    
+    // J. remove(Student[], int)
+    public static Student[] remove(Student[] array, int index) {
+        Student[] temp = new Student[0];
+        for(int i = 0; i < size(array); i++) {
+            if(i != index) {
+                temp = add(temp, get(array, i));
+            }
+        }
+        return temp;
+    }
+    
+    // K. remove(Student[], Student)
+    public static Student[] remove(Student[] array, Student s) {
+        return remove(array, indexOf(array, s));
+    }
 
 }

@@ -3,6 +3,7 @@ package homework;
 // 지금 현재 util.ArrayUtil에는 int[]을 기준으로한 동적할당 메소드만 존재한다.
 // String[]을 기준으로한 동적할당 메소드(A부터 K까지) 구현하시오
 // 단, remove의 경우 이름을 통일시켜준다.
+import util.ArrayUtil;
 public class Ex04ArrayUtil {
     // 1. String[] 기준
     // A. 현재 배열의 길이를 알려주는 size(String[])
@@ -141,4 +142,93 @@ public class Ex04ArrayUtil {
         return removeByIndex(array, indexOf(array, element));
     }
 
+    public static void main(String[] args) {
+        // String 배열 기준의 ArrayUtil메서드를 실험해보는 클래스
+        String[] arr = new String[3];
+        arr[0] = "abc";
+        arr[1] = "bcd";
+        arr[2] = "cde";
+        
+        System.out.println("2. String[]");
+        System.out.println("A. size1()");
+        System.out.println("2-A: " + ArrayUtil.size1(arr));
+        System.out.println("-------------------------------------------\n");
+        
+        System.out.println("B. isEmpty1()");
+        System.out.println("2-B: " + ArrayUtil.isEmpty1(arr));
+        
+        System.out.println("C. get1()");
+        System.out.println("get1(arr, 0): " + ArrayUtil.get1(arr, 0));
+        System.out.println("-------------------------------------------\n");
+        
+        System.out.println("D. contains1()");
+        System.out.println("contains1(\"abc\"): " + ArrayUtil.contains1(arr, "abc"));
+        System.out.println("contains1(\"aaa\"): " + ArrayUtil.contains1(arr, "aaa"));
+        System.out.println("contains1(new String(\"abc\")): " + ArrayUtil.contains1(arr, new String("abc")));
+        System.out.println("-------------------------------------------\n");
+        
+        System.out.println("E. indexOf1()");
+        System.out.println("indexOf1(\"abc\"): " + ArrayUtil.indexOf1(arr, "abc"));
+        System.out.println("indexOf1(\"aaa\"): " + ArrayUtil.indexOf1(arr, "aaa"));
+        System.out.println("indexOf1(new String(\"abc\")): " + ArrayUtil.indexOf1(arr, new String("abc")));
+        System.out.println("-------------------------------------------\n");
+        
+        System.out.println("F. lastIndexOf1()");
+        System.out.println("lastIndexOf1(\"abc\"): " + ArrayUtil.lastIndexOf1(arr, "abc"));
+        System.out.println("lastIndexOf1(\"aaa\"): " + ArrayUtil.lastIndexOf1(arr, "aaa"));
+        System.out.println("lastIndexOf1(new String(\"abc\")): " + ArrayUtil.lastIndexOf1(arr, new String("abc")));
+        System.out.println("-------------------------------------------\n");
+        
+        System.out.println("G. add1()");
+        System.out.println("add1() 전 length: " + ArrayUtil.size1(arr));
+        System.out.println("add1() 전 contains1(def): " + ArrayUtil.contains1(arr, "def"));
+        
+        arr = ArrayUtil.add1(arr, "def");
+        
+        System.out.println("add1() 후 length: " + ArrayUtil.size1(arr));
+        System.out.println("add1() 후 contains1(def): " + ArrayUtil.contains1(arr, "def"));
+        System.out.println("-------------------------------------------\n");
+        
+        System.out.println("H. add1()");
+        System.out.println("add1() 전 length: " + ArrayUtil.size1(arr));
+        System.out.println("add1() 전 indexOf1(def): " + ArrayUtil.indexOf1(arr, "def"));
+        
+        arr = ArrayUtil.add1(arr, 0, "def");
+        
+        System.out.println("add1() 후 length: " + ArrayUtil.size1(arr));
+        System.out.println("add1() 후 indexOf1(def): " + ArrayUtil.indexOf1(arr, "def"));
+        System.out.println("-------------------------------------------\n");
+
+        System.out.println("I. set1()");
+        System.out.println("set1() 전 get1(2): " + ArrayUtil.get1(arr, 2));
+        
+        String temp = ArrayUtil.set1(arr, 2, "zzz");
+        
+        System.out.println("set1() 후 get1(2): " + ArrayUtil.get1(arr, 2));
+        System.out.println("set1() 전 원래 2번 인덱스의 값: " +  temp);
+        System.out.println("-------------------------------------------\n");
+        
+        System.out.println("J. remove1()");
+        System.out.println("remove1() 전 size1(): " + ArrayUtil.size1(arr));
+        System.out.println("remove1() 전 get1(0): " + ArrayUtil.get1(arr, 0));
+        
+        arr = ArrayUtil.remove1(arr, 0);
+        
+        System.out.println("remove1() 후 size1(): " + ArrayUtil.size1(arr));
+        System.out.println("remove1() 후 get1(0): " + ArrayUtil.get1(arr, 0));
+        System.out.println("-------------------------------------------\n");
+        
+        System.out.println("K. remove1()");
+        System.out.println("remove1(zzz) 전 contains1(zzz): " + ArrayUtil.contains1(arr, "zzz"));
+        System.out.println("remove1(ttt) 전 size1(): " + ArrayUtil.size1(arr));
+        
+        arr = ArrayUtil.remove1(arr, "zzz");
+        arr = ArrayUtil.remove1(arr, "ttt");
+        
+        System.out.println("remove1(zzz) 후 contains1(zzz): " + ArrayUtil.contains1(arr, "zzz"));
+        System.out.println("remove1(ttt) 후 size1(): " + ArrayUtil.size1(arr));      
+        System.out.println("-------------------------------------------\n");
+
+        
+    }
 }
