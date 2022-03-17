@@ -11,7 +11,7 @@ public class Ex06NestedFor {
         for(int i = 1; i <= 3; i++) {
             System.out.println("---------------------------------");
             
-            for(int j = 11; j <= 14; j++) {
+            for(int j = 11; j <=14; j++) {
                 System.out.printf("i의 현재값: [%d] j의 현재값: [%d]\n", i, j);
             }
             
