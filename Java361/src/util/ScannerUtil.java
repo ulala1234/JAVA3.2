@@ -61,6 +61,7 @@ public class ScannerUtil {
     
     // 5. double 입력을 처리하는
     //    nextDouble(Scanner, String)
+    
     // public static double nextDouble(Scanner scanner, String message) {
         // printMessage(message);
         // double temp = scanner.nextDouble();
@@ -77,7 +78,8 @@ public class ScannerUtil {
     // 6. 범위 내 double 입력을 처리하는
     //    nextDouble(Scanner, String, double, double)
     //    단, 이상/이하가 아니라 초과/미만으로 처리한다.
-    // public static double nextDouble(Scanner scanner, String message, double min, double max) {
+    
+        // public static double nextDouble(Scanner scanner, String message, double min, double max) {
         // double temp = nextDouble(scanner, message);
         
         // while(!(temp > min && temp < max)) {

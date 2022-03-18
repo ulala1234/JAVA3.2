@@ -56,12 +56,25 @@ public class Ex05DAlloc {
         intArray = ArrayUtil.add(intArray, 2, 25);
         System.out.println("1-H. add() 후 size(intArray): " + ArrayUtil.size(intArray));
         System.out.println("1-H. add() 후 get(intArray, 2): " + ArrayUtil.get(intArray, 2));
+        /* System.out.println(intArray[0]);
+        System.out.println(intArray[1]);
+        System.out.println(intArray[2]);
+        System.out.println(intArray[3]);
+        System.out.println(intArray[4]);
+        System.out.println(intArray[5]); */
         
         // I. set(int[], int, int)
         System.out.println("1-I. set() 전 get(intArray, 2): " + ArrayUtil.get(intArray, 2));
         int temp = ArrayUtil.set(intArray, 2, 400);
         System.out.println("1-I. set() 후 get(intArray, 2): " + ArrayUtil.get(intArray, 2));
         System.out.println("1-I. set() 후 기존 2번 인덱스에 저장되어있던 값: " + temp);
+        /* System.out.println(intArray[0]);
+        System.out.println(intArray[1]);
+        System.out.println(intArray[2]);
+        System.out.println(intArray[3]);
+        System.out.println(intArray[4]);
+        System.out.println(intArray[5]); */
+        
         
         // J. removeByIndex(int[], int)
         System.out.println("1-J. remove() 전 size(intArray): " + ArrayUtil.size(intArray));
