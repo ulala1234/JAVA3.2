@@ -38,7 +38,7 @@ public class Ex06Board {
     }
     
     // 2. 메뉴를 출력하고 게시글 입력, 게시글 출력, 프로그램 종료에 따른
-    //    메소드 및 코드 처리를 할 showMene()
+    //    메소드 및 코드 처리를 할 showMenu()
     private static void showMenu() {
         while(true) {
             String message = "1. 입력 2. 출력 3. 종료";
