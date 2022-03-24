@@ -15,12 +15,15 @@ public class UserViewer {
     private UserController userController;
     private UserDTO logIn;
     private BoardViewer boardViewer;
+    private ReplyViewer replyViewer;
     
     
     public UserViewer() {
         scanner = new Scanner(System.in);
         userController = new UserController();
+        replyViewer = new ReplyViewer();
         boardViewer = new BoardViewer();
+        boardViewer.setReplyViewer(replyViewer);
         boardViewer.setUserViewer(this);
     }
     
@@ -170,6 +173,8 @@ public class UserViewer {
         
         if(yesNo.equalsIgnoreCase("Y")) {
             userController.delete(id);
+            boardViewer.deleteByWriterId(id);
+            replyViewer.deleteByWriterId(id);
             logIn = null;
         } else {
             printOne(id);
@@ -178,6 +183,6 @@ public class UserViewer {
     
     public void printNickname(int id) {
         UserDTO u = userController.selectOne(id);
-        System.out.println(u.getNickname());
+        System.out.print(u.getNickname());
     }
 }

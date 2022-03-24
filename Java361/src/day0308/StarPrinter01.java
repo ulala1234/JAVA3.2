@@ -67,25 +67,7 @@ public class StarPrinter01 {
    //     }
         System.out.println("-----------------------------------------\n");
                    
-        for(int i = iMin; i <= iMax; i++) {
-            // j의 최소값
-            int jMin = i;
-            
-            // j의 최대값
-            int jMax = userNumber;
-            
-            // i번째 줄에 출력될 내용을 저장할 String 변수
-            String stars = "";
-            
-            for(int j = jMin; j <= jMax; j++) {
-                // j for문이 반복하면서
-                // String 변수 stars의 현재 내용에
-                // *을 이어붙여서 다시 stars에 저장해라
-                stars += "*";                
-            }
-            
-            System.out.println(stars);
-        } 
+        
         
  //       for(int i = iMin; i <= iMax; i++) {
  //           int jMin = 1;

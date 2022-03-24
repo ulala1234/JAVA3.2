@@ -17,11 +17,14 @@ public class ScannerUtil {
     //    int 데이터타입의 값을 입력 받아서 리턴해주는
     //    nextInt(Scanner, String)
     public static int nextInt(Scanner scanner, String message) {
-        printMessage(message);
+        String temp = nextLine(scanner, message);
         
-        int temp = scanner.nextInt();
+        while(!temp.matches("[0-9]+")) {
+            System.out.println("잘못 입력하셨습니다.");
+            temp = nextLine(scanner, message);
+        }
         
-        return temp;
+        return Integer.parseInt(temp);
     }
     
     // 3. 특정 범위의 int 값만 입력을 받아 리턴하는
